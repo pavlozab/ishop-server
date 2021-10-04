@@ -1,4 +1,5 @@
-# IPhone shop API
+# IPhone Shop API
+Change DbConfig. 
 
 ### Clone 
 - Clone this repo to your local machine using `https://github.com/pavlozab/my-api`
