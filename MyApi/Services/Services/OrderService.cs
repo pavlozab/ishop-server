@@ -29,7 +29,7 @@ namespace Services
             return await _orderRepository.GetAll(userId);
         }
 
-        public async Task<OrderResponseDto> GetOne(Guid id, Guid userId)
+        public async Task<Order> GetOne(Guid id, Guid userId)
         {
             var order = await _orderRepository.GetOne(id);
             
@@ -38,36 +38,37 @@ namespace Services
 
             if (order.Id != userId)
                 throw new KeyNotFoundException("No order found.");
-
-            var result = _mapper.Map<OrderResponseDto>(order);
-            return result;
+            
+            return order;
         }
 
-        public async Task<OrderResponseDto> Create(CreateOrderDto newOrder, Guid userId)
+        public async Task<Order> Create(Order newOrder, Guid userId)
         {
-            var currentProduct = await _productsRepository.GetOne(newOrder.AddressId);
+            var orderId = Guid.NewGuid();
+            newOrder.Id = orderId;
+
+            foreach (var product in newOrder.Products)
+            {
+                var currentProduct = await _productsRepository.GetOne(newOrder.Id);
+                if (currentProduct is null)
+                    throw new KeyNotFoundException("No Product found.");
+                
+                if (currentProduct.Amount < product.Amount)
+                    throw new OutOfStockException("Out of stock", product.Amount, currentProduct.Amount);
+                
+                product.OrderId = orderId;
+                product.ProductOrderId = Guid.NewGuid();
+                currentProduct.Amount -= product.Amount;
+                await _productsRepository.Update(currentProduct);
+
+                newOrder.TotalPrice += product.Amount * currentProduct.Price;
+            }
             
-            if (currentProduct is null)
-                throw new KeyNotFoundException("No Address found.");
-
-            if (currentProduct.Amount < newOrder.Amount)
-                throw new OutOfStockException("Out of stock", newOrder.Amount, currentProduct.Amount);
-
-            var order = _mapper.Map<Order>(newOrder);
-            order.UserId = userId;
-            order.Date = DateTime.Now;
+            newOrder.UserId = userId;
+            newOrder.Date = DateTime.Now;
             
-            currentProduct.Amount -= order.Amount;
-            await _productsRepository.Update(currentProduct);
-            await _orderRepository.Create(order);
-
-            var result = _mapper.Map<OrderResponseDto>(order);
-            return result;
-        }
-        
-        public async Task Buy(List<Guid> orders, Guid userId)
-        {
-            await _orderRepository.Buy(orders, userId);
+            await _orderRepository.Create(newOrder);
+            return newOrder;
         }
     }
 

@@ -91,7 +91,7 @@ namespace MyApi.Controllers
         /// <response code="201">Returns the newly created item.</response>
         /// <response code="400">Product is not created.</response>  
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
         public async Task<ActionResult<ProductResponseDto>> Create(CreateAddressDto addressDto)
@@ -125,7 +125,7 @@ namespace MyApi.Controllers
         /// <response code="204">Updated product.</response>
         /// <response code="404">Product hasn't been found.</response>
         [HttpPut("{id}")]
-        [Authorize(Roles = "ADMIN")]
+        //[Authorize(Roles = "ADMIN")]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
         public async Task<ActionResult> Update(Guid id, UpdateProductDto productDto)
@@ -150,7 +150,7 @@ namespace MyApi.Controllers
         /// <response code="204">Deleted product</response>
         /// <response code="404">Product hasn't been found.</response>
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
         public async Task<ActionResult> Delete(Guid id)

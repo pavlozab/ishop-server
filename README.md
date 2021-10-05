@@ -1,4 +1,4 @@
-# IPhone Shop API
+# IShop API
 Change DbConfig. 
 
 ### Clone 

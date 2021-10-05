@@ -955,19 +955,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/user/.nuget/packages/": {}
+    "/Users/pasha/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/user/Documents/MyApi/WebFramework/WebFramework.csproj",
+      "projectUniqueName": "/Users/pasha/GitHub/my-api/MyApi/WebFramework/WebFramework.csproj",
       "projectName": "WebFramework",
-      "projectPath": "/Users/user/Documents/MyApi/WebFramework/WebFramework.csproj",
-      "packagesPath": "/Users/user/.nuget/packages/",
-      "outputPath": "/Users/user/Documents/MyApi/WebFramework/obj/",
+      "projectPath": "/Users/pasha/GitHub/my-api/MyApi/WebFramework/WebFramework.csproj",
+      "packagesPath": "/Users/pasha/.nuget/packages/",
+      "outputPath": "/Users/pasha/GitHub/my-api/MyApi/WebFramework/obj/",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/Users/user/.nuget/NuGet/NuGet.Config"
+        "/Users/pasha/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -979,8 +983,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/user/Documents/MyApi/Entities/Entities.csproj": {
-              "projectPath": "/Users/user/Documents/MyApi/Entities/Entities.csproj"
+            "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj": {
+              "projectPath": "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj"
             }
           }
         }
@@ -1015,7 +1019,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
       }
     }
   }

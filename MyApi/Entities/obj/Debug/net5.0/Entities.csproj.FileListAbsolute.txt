@@ -34,3 +34,15 @@
 /Users/user/Documents/MyApi/Entities/obj/Debug/net5.0/Entities.dll
 /Users/user/Documents/MyApi/Entities/obj/Debug/net5.0/ref/Entities.dll
 /Users/user/Documents/MyApi/Entities/obj/Debug/net5.0/Entities.pdb
+/Users/pasha/GitHub/my-api/MyApi/Entities/bin/Debug/net5.0/Entities.deps.json
+/Users/pasha/GitHub/my-api/MyApi/Entities/bin/Debug/net5.0/Entities.dll
+/Users/pasha/GitHub/my-api/MyApi/Entities/bin/Debug/net5.0/ref/Entities.dll
+/Users/pasha/GitHub/my-api/MyApi/Entities/bin/Debug/net5.0/Entities.pdb
+/Users/pasha/GitHub/my-api/MyApi/Entities/obj/Debug/net5.0/Entities.csprojAssemblyReference.cache
+/Users/pasha/GitHub/my-api/MyApi/Entities/obj/Debug/net5.0/Entities.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pasha/GitHub/my-api/MyApi/Entities/obj/Debug/net5.0/Entities.AssemblyInfoInputs.cache
+/Users/pasha/GitHub/my-api/MyApi/Entities/obj/Debug/net5.0/Entities.AssemblyInfo.cs
+/Users/pasha/GitHub/my-api/MyApi/Entities/obj/Debug/net5.0/Entities.csproj.CoreCompileInputs.cache
+/Users/pasha/GitHub/my-api/MyApi/Entities/obj/Debug/net5.0/Entities.dll
+/Users/pasha/GitHub/my-api/MyApi/Entities/obj/Debug/net5.0/ref/Entities.dll
+/Users/pasha/GitHub/my-api/MyApi/Entities/obj/Debug/net5.0/Entities.pdb

@@ -2092,19 +2092,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/user/.nuget/packages/": {}
+    "/Users/pasha/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/user/Documents/MyApi/Services/Services.csproj",
+      "projectUniqueName": "/Users/pasha/GitHub/my-api/MyApi/Services/Services.csproj",
       "projectName": "Services",
-      "projectPath": "/Users/user/Documents/MyApi/Services/Services.csproj",
-      "packagesPath": "/Users/user/.nuget/packages/",
-      "outputPath": "/Users/user/Documents/MyApi/Services/obj/",
+      "projectPath": "/Users/pasha/GitHub/my-api/MyApi/Services/Services.csproj",
+      "packagesPath": "/Users/pasha/.nuget/packages/",
+      "outputPath": "/Users/pasha/GitHub/my-api/MyApi/Services/obj/",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/Users/user/.nuget/NuGet/NuGet.Config"
+        "/Users/pasha/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -2116,14 +2120,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/user/Documents/MyApi/Data/Data.csproj": {
-              "projectPath": "/Users/user/Documents/MyApi/Data/Data.csproj"
+            "/Users/pasha/GitHub/my-api/MyApi/Data/Data.csproj": {
+              "projectPath": "/Users/pasha/GitHub/my-api/MyApi/Data/Data.csproj"
             },
-            "/Users/user/Documents/MyApi/Entities/Entities.csproj": {
-              "projectPath": "/Users/user/Documents/MyApi/Entities/Entities.csproj"
+            "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj": {
+              "projectPath": "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj"
             },
-            "/Users/user/Documents/MyApi/WebFramework/WebFramework.csproj": {
-              "projectPath": "/Users/user/Documents/MyApi/WebFramework/WebFramework.csproj"
+            "/Users/pasha/GitHub/my-api/MyApi/WebFramework/WebFramework.csproj": {
+              "projectPath": "/Users/pasha/GitHub/my-api/MyApi/WebFramework/WebFramework.csproj"
             }
           }
         }
@@ -2177,7 +2181,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
       }
     }
   },

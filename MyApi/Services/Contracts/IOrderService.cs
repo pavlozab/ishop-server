@@ -9,8 +9,7 @@ namespace Services
     public interface IOrderService
     {
         Task<IEnumerable<Order>> GetAll(Guid userId);
-        Task<OrderResponseDto> GetOne(Guid orderId, Guid userId);
-        Task<OrderResponseDto> Create(CreateOrderDto newOrder, Guid userId);
-        Task Buy(List<Guid> orders, Guid userId);
+        Task<Order> GetOne(Guid orderId, Guid userId);
+        Task<Order> Create(Order newOrder, Guid userId);
     }
 }

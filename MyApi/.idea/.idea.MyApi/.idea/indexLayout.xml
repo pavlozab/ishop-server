@@ -2,8 +2,9 @@
 <project version="4">
   <component name="UserContentModel">
     <attachedFolders>
-      <Path>../../../Task_06</Path>
       <Path>../../EducationPractice</Path>
+      <Path>../../my-api</Path>
+      <Path>../../../Task_06</Path>
     </attachedFolders>
     <explicitIncludes />
     <explicitExcludes />

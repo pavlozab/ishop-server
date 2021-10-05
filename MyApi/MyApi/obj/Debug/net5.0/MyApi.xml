@@ -55,25 +55,15 @@
             <response code="401">Invalid token.</response>
             <response code="404">Order hasn't been found.</response>
         </member>
-        <member name="M:MyApi.Controllers.OrderController.CreateOrder(Dto.CreateOrderDto)">
-             <summary>
-             Create a new Order.
-             </summary>
-             /// <remarks>
-             Sample request:
-            
-                 POST /orders
-                 {
-                    "productId": "8a4263bb-fca6-4ab0-a3c9-cf524fe32b8e",
-                    "amount": 1
-                 }
-            
-             </remarks>
-             <param name="newOrder">New Order</param>
-             <returns>New Order</returns>
-             <response code="201">Returns the newly created order</response>
-             <response code="403">Not enough product</response>
-             <response code="404">Product hasn't been found.</response>
+        <member name="M:MyApi.Controllers.OrderController.CreateOrder(Entities.Order)">
+            <summary>
+            Create a new Order.
+            </summary>
+            <param name="newOrder">New Order</param>
+            <returns>New Order</returns>
+            <response code="201">Returns the newly created order</response>
+            <response code="403">Not enough product</response>
+            <response code="404">Product hasn't been found.</response>
         </member>
         <member name="M:MyApi.Controllers.ProductController.GetAll(Data.Dto.QueryMetaDto)">
             <summary>

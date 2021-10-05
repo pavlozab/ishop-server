@@ -14,7 +14,6 @@ namespace Entities
         public double Price { get; set; }
 
         public int Amount { get; set; }
-        public ICollection<Order> Orders { get; set; }
     }
     
     public class AddressConfiguration : IEntityTypeConfiguration<Product>
