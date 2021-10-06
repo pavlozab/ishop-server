@@ -10,7 +10,7 @@ namespace Data
         Task<IEnumerable<Product>> GetAll(QueryMetaDto queryMetaDto); 
         Task Update(Product item);
         Task<long> Count();
-        Task<IEnumerable<string>> GetBrands(); 
+        Task<IEnumerable<double>> GetDiagonals(); 
         Task<IEnumerable<string>> GetColors(); 
         Task<IEnumerable<int>> GetMemories(); 
     }

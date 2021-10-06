@@ -11,7 +11,7 @@ namespace Data.Dto
         public int Limit { get; set; }
         public string Search { get; set; }
         
-        public string Brands { get; set; }
+        public string Diagonals { get; set; }
         public string Memories { get; set; }
         public string Colors { get; set; }
 
@@ -22,7 +22,7 @@ namespace Data.Dto
             SortType = "ASC";
             Offset = 0;
             Limit = 10;
-            Brands = "";
+            Diagonals = "";
             Memories = "";
             Colors = "";
         }

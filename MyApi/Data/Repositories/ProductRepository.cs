@@ -19,7 +19,7 @@ namespace Data
             var sql = $"SELECT * FROM \"Products\" " +
                            $"WHERE \"Title\" LIKE '%{queryMetaDto.Search}%' ";
             
-            if (queryMetaDto.Brands != "") sql += $" and \"Brand\" IN ({queryMetaDto.Brands}) ";
+            if (queryMetaDto.Diagonals != "") sql += $" and \"Brand\" IN ({queryMetaDto.Diagonals}) ";
             if (queryMetaDto.Memories != "") sql += $" and \"Size\" IN ({queryMetaDto.Memories}) ";
             if (queryMetaDto.Colors != "") sql += $" and \"Season\" IN ({queryMetaDto.Colors}) ";
 
@@ -42,9 +42,9 @@ namespace Data
             return await _context.Products.CountAsync();
         }
 
-        public async Task<IEnumerable<string>> GetBrands()
+        public async Task<IEnumerable<double>> GetDiagonals()
         {
-            return await _context.Products.Select(obj => obj.Brand).Distinct().ToListAsync();
+            return await _context.Products.Select(obj => obj.Diagonal).Distinct().ToListAsync();
         }
 
         public async Task<IEnumerable<string>> GetColors()
