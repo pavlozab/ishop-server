@@ -80,50 +80,20 @@
             <response code="404">Product hasn't been found.</response>
         </member>
         <member name="M:MyApi.Controllers.ProductController.Create(Dto.CreateAddressDto)">
-             <summary>
-             Create a Product.
-             </summary>
-             <remarks>
-             Sample request:
-            
-                 POST /products
-                 {
-                     "image": "string",
-                     "brand": "string",
-                     "memory": 0,
-                     "title": "string",
-                     "price": 0,
-                     "color": "string",
-                     "amount": 0
-                 }
-            
-             </remarks>
-             <response code="201">Returns the newly created item.</response>
-             <response code="400">Product is not created.</response>  
+            <summary>
+            Create a Product.
+            </summary>
+            <response code="201">Returns the newly created item.</response>
+            <response code="400">Product is not created.</response>  
         </member>
         <member name="M:MyApi.Controllers.ProductController.Update(System.Guid,Dto.UpdateProductDto)">
-             <summary>
-             Update a specific Product.
-             </summary>
-             <remarks>
-              Sample request:
-            
-                 PUT /products
-                 {
-                     "image": "string",
-                     "brand": "string",
-                     "memory": 0,
-                     "title": "string",
-                     "price": 0,
-                     "color": "string",
-                     "amount": 0
-                 }
-            
-             </remarks>
-             <param name="id">The id of the item to be updated.</param>
-             <param name="productDto">Updated product.</param>
-             <response code="204">Updated product.</response>
-             <response code="404">Product hasn't been found.</response>
+            <summary>
+            Update a specific Product.
+            </summary>
+            <param name="id">The id of the item to be updated.</param>
+            <param name="productDto">Updated product.</param>
+            <response code="204">Updated product.</response>
+            <response code="404">Product hasn't been found.</response>
         </member>
         <member name="M:MyApi.Controllers.ProductController.Delete(System.Guid)">
             <summary>

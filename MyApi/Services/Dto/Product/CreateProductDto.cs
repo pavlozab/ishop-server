@@ -8,9 +8,6 @@ namespace Dto
         public string Image { get; set; }
         
         [Required]
-        public string Brand { get; set; }
-        
-        [Required]
         public string Title { get; set; }
         
         [Required] 
@@ -20,6 +17,12 @@ namespace Dto
         [Required]
         public double Price { get; set; }
         
+        [Required]
+        public double NewPrice { get; set; }
+        
+        [Required]
+        public double Diagonal { get; set; }
+
         [Required]
         public string Color { get; set; }
 

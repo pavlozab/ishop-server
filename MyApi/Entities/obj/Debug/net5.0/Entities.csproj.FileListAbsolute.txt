@@ -46,3 +46,15 @@
 /Users/pasha/GitHub/my-api/MyApi/Entities/obj/Debug/net5.0/Entities.dll
 /Users/pasha/GitHub/my-api/MyApi/Entities/obj/Debug/net5.0/ref/Entities.dll
 /Users/pasha/GitHub/my-api/MyApi/Entities/obj/Debug/net5.0/Entities.pdb
+/Users/home/RiderProjects/my-api/MyApi/Entities/bin/Debug/net5.0/Entities.deps.json
+/Users/home/RiderProjects/my-api/MyApi/Entities/bin/Debug/net5.0/Entities.dll
+/Users/home/RiderProjects/my-api/MyApi/Entities/bin/Debug/net5.0/ref/Entities.dll
+/Users/home/RiderProjects/my-api/MyApi/Entities/bin/Debug/net5.0/Entities.pdb
+/Users/home/RiderProjects/my-api/MyApi/Entities/obj/Debug/net5.0/Entities.csproj.AssemblyReference.cache
+/Users/home/RiderProjects/my-api/MyApi/Entities/obj/Debug/net5.0/Entities.GeneratedMSBuildEditorConfig.editorconfig
+/Users/home/RiderProjects/my-api/MyApi/Entities/obj/Debug/net5.0/Entities.AssemblyInfoInputs.cache
+/Users/home/RiderProjects/my-api/MyApi/Entities/obj/Debug/net5.0/Entities.AssemblyInfo.cs
+/Users/home/RiderProjects/my-api/MyApi/Entities/obj/Debug/net5.0/Entities.csproj.CoreCompileInputs.cache
+/Users/home/RiderProjects/my-api/MyApi/Entities/obj/Debug/net5.0/Entities.dll
+/Users/home/RiderProjects/my-api/MyApi/Entities/obj/Debug/net5.0/ref/Entities.dll
+/Users/home/RiderProjects/my-api/MyApi/Entities/obj/Debug/net5.0/Entities.pdb
