@@ -7,11 +7,12 @@ namespace Entities
     public class Product : BaseEntity
     {
         public string Image { get; set; }
-        public string Brand { get; set; }
         public string Title { get; set; }
         public int Memory { get; set; }
         public string Color { get; set; }
         public double Price { get; set; }
+        public double NewPrice { get; set; }
+        public double Diagonal { get; set; }
 
         public int Amount { get; set; }
     }

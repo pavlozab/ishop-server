@@ -67,9 +67,9 @@ namespace Services
             return await _repository.Count();
         }
 
-        public async Task<IEnumerable<string>> GetBrands()
+        public async Task<IEnumerable<double>> GetDiagonals()
         {
-            return await _repository.GetBrands();
+            return await _repository.GetDiagonals();
         }
 
         public async Task<IEnumerable<string>> GetColors()

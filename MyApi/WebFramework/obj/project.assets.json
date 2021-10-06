@@ -955,23 +955,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/pasha/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/Users/home/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/pasha/GitHub/my-api/MyApi/WebFramework/WebFramework.csproj",
+      "projectUniqueName": "/Users/home/RiderProjects/my-api/MyApi/WebFramework/WebFramework.csproj",
       "projectName": "WebFramework",
-      "projectPath": "/Users/pasha/GitHub/my-api/MyApi/WebFramework/WebFramework.csproj",
-      "packagesPath": "/Users/pasha/.nuget/packages/",
-      "outputPath": "/Users/pasha/GitHub/my-api/MyApi/WebFramework/obj/",
+      "projectPath": "/Users/home/RiderProjects/my-api/MyApi/WebFramework/WebFramework.csproj",
+      "packagesPath": "/Users/home/.nuget/packages/",
+      "outputPath": "/Users/home/RiderProjects/my-api/MyApi/WebFramework/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "/Users/pasha/.nuget/NuGet/NuGet.Config"
+        "/Users/home/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -983,8 +979,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj": {
-              "projectPath": "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj"
+            "/Users/home/RiderProjects/my-api/MyApi/Entities/Entities.csproj": {
+              "projectPath": "/Users/home/RiderProjects/my-api/MyApi/Entities/Entities.csproj"
             }
           }
         }
@@ -1019,7 +1015,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
       }
     }
   }

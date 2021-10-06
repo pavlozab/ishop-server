@@ -14,7 +14,7 @@ namespace Services
         Task Update(Guid id, UpdateProductDto productDto);
         Task Delete(Guid id);
         Task<long> Count();
-        Task<IEnumerable<string>> GetBrands(); 
+        Task<IEnumerable<double>> GetDiagonals(); 
         Task<IEnumerable<string>> GetColors(); 
         Task<IEnumerable<int>> GetMemories(); 
     }

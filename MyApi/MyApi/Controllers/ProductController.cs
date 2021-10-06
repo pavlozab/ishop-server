@@ -73,21 +73,6 @@ namespace MyApi.Controllers
         /// <summary>
         /// Create a Product.
         /// </summary>
-        /// <remarks>
-        /// Sample request:
-        ///
-        ///     POST /products
-        ///     {
-        ///         "image": "string",
-        ///         "brand": "string",
-        ///         "memory": 0,
-        ///         "title": "string",
-        ///         "price": 0,
-        ///         "color": "string",
-        ///         "amount": 0
-        ///     }
-        ///
-        /// </remarks>
         /// <response code="201">Returns the newly created item.</response>
         /// <response code="400">Product is not created.</response>  
         [HttpPost]
@@ -105,21 +90,6 @@ namespace MyApi.Controllers
         /// <summary>
         /// Update a specific Product.
         /// </summary>
-        /// <remarks>
-        ///  Sample request:
-        ///
-        ///     PUT /products
-        ///     {
-        ///         "image": "string",
-        ///         "brand": "string",
-        ///         "memory": 0,
-        ///         "title": "string",
-        ///         "price": 0,
-        ///         "color": "string",
-        ///         "amount": 0
-        ///     }
-        ///
-        /// </remarks>
         /// <param name="id">The id of the item to be updated.</param>
         /// <param name="productDto">Updated product.</param>
         /// <response code="204">Updated product.</response>
@@ -169,10 +139,10 @@ namespace MyApi.Controllers
         }
         
         [AllowAnonymous]
-        [HttpGet("brands")]
-        public async Task<ActionResult<ProductResponseDto>> GetBrands()
+        [HttpGet("diagonals")]
+        public async Task<ActionResult<ProductResponseDto>> GetDiagonals()
         {
-            var product = await _service.GetBrands();
+            var product = await _service.GetDiagonals();
             return Ok(product);
         }
         
