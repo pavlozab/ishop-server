@@ -19,9 +19,9 @@ namespace Data
             var sql = $"SELECT * FROM \"Products\" " +
                            $"WHERE \"Title\" LIKE '%{queryMetaDto.Search}%' ";
             
-            if (queryMetaDto.Diagonals != "") sql += $" and \"Brand\" IN ({queryMetaDto.Diagonals}) ";
-            if (queryMetaDto.Memories != "") sql += $" and \"Size\" IN ({queryMetaDto.Memories}) ";
-            if (queryMetaDto.Colors != "") sql += $" and \"Season\" IN ({queryMetaDto.Colors}) ";
+            if (queryMetaDto.Diagonals != "") sql += $" and \"Diagonal\" IN ({queryMetaDto.Diagonals}) ";
+            if (queryMetaDto.Memories != "") sql += $" and \"Memory\" IN ({queryMetaDto.Memories}) ";
+            if (queryMetaDto.Colors != "") sql += $" and \"Color\" IN ({queryMetaDto.Colors}) ";
 
             sql += $"ORDER BY \"{queryMetaDto.SortBy}\" {queryMetaDto.SortType} " + 
                    $"LIMIT {queryMetaDto.Limit} OFFSET {queryMetaDto.Offset};";

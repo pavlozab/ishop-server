@@ -27,8 +27,6 @@
             
                  POST /registration
                  {
-                     firstname: ‘John’,
-                     lastname: ‘Doe’,
                      email: ‘test@email.com’,
                      password: ‘12345’
                  }
@@ -102,21 +100,6 @@
             <param name="id">The id of the item to be deleted</param>
             <response code="204">Deleted product</response>
             <response code="404">Product hasn't been found.</response>
-        </member>
-        <member name="M:MyApi.Controllers.UserController.UpdateRoleOfUser(System.Guid,Entities.Role)">
-            <summary>
-            Update Role of User. Only for Admin User.
-            </summary>
-            <param name="id">The id of the user which Role to be updated.</param>
-            <param name="newRole">New Role</param>
-            <returns>User with updated Role's.</returns>
-            <response code="200">Updated user</response>
-        </member>
-        <member name="M:MyApi.Controllers.UserController.DeleteUser(System.Guid)">
-            <summary>
-            Delete User. Only for Admin User.
-            </summary>
-            <param name="id">The id of the user to be deleted.</param>
         </member>
     </members>
 </doc>

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Authentication;
@@ -46,6 +47,7 @@ namespace Services
 
         public async Task<AccessToken> Login(LoginDto loginDto)
         {
+            Console.WriteLine("1");
             var user = await _userService.GetUserByEmail(loginDto.Email);
             return await GetAccessToken(user);
         }

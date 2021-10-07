@@ -49,7 +49,7 @@ namespace Services
 
             foreach (var product in newOrder.Products)
             {
-                var currentProduct = await _productsRepository.GetOne(newOrder.Id);
+                var currentProduct = await _productsRepository.GetOne(product.ProductId);
                 if (currentProduct is null)
                     throw new KeyNotFoundException("No Product found.");
                 

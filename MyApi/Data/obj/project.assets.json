@@ -1533,19 +1533,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/home/.nuget/packages/": {}
+    "/Users/pasha/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/home/RiderProjects/my-api/MyApi/Data/Data.csproj",
+      "projectUniqueName": "/Users/pasha/GitHub/my-api/MyApi/Data/Data.csproj",
       "projectName": "Data",
-      "projectPath": "/Users/home/RiderProjects/my-api/MyApi/Data/Data.csproj",
-      "packagesPath": "/Users/home/.nuget/packages/",
-      "outputPath": "/Users/home/RiderProjects/my-api/MyApi/Data/obj/",
+      "projectPath": "/Users/pasha/GitHub/my-api/MyApi/Data/Data.csproj",
+      "packagesPath": "/Users/pasha/.nuget/packages/",
+      "outputPath": "/Users/pasha/GitHub/my-api/MyApi/Data/obj/",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/Users/home/.nuget/NuGet/NuGet.Config"
+        "/Users/pasha/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1557,8 +1561,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/home/RiderProjects/my-api/MyApi/Entities/Entities.csproj": {
-              "projectPath": "/Users/home/RiderProjects/my-api/MyApi/Entities/Entities.csproj"
+            "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj": {
+              "projectPath": "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj"
             }
           }
         }
@@ -1601,7 +1605,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
       }
     }
   }
