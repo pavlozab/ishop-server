@@ -85,6 +85,8 @@ namespace MyApi
                     ClockSkew = TimeSpan.FromMinutes(1)
                 };
             });
+            
+            services.AddCors();
 
             // Controller
             services.AddControllers();
@@ -143,8 +145,11 @@ namespace MyApi
             });
 
             app.UseHttpsRedirection();
-
+            
             app.UseRouting();
+            app.UseCors(builder => builder.WithOrigins("http://localhost:3001", "http://localhost:3000")
+                .AllowAnyHeader()
+                .AllowAnyMethod());
             
             app.UseAuthentication();
 
