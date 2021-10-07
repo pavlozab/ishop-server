@@ -2,10 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Data;
 using Dto;
 using Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Services;
@@ -20,11 +22,13 @@ namespace MyApi.Controllers
     {
         private readonly ILogger<OrderController> _logger;
         private readonly IOrderService _orderService;
+        private readonly ApplicationDbContext _context;
 
-        public OrderController(ILogger<OrderController> logger, IOrderService orderService)
+        public OrderController(ILogger<OrderController> logger, IOrderService orderService, ApplicationDbContext context)
         {
             _logger = logger;
             _orderService = orderService;
+            _context = context;
         }
 
         /// <summary>
@@ -36,14 +40,29 @@ namespace MyApi.Controllers
         [HttpGet]
         [ProducesResponseType(200)]
         [ProducesResponseType(401)]
-        public async Task<ActionResult<IEnumerable<Order>>> GetAllOrders()
+        public async Task<ActionResult> GetAllOrders()
         {
             try
             {
                 var userId = GetCurrentUserId();
 
                 _logger.LogInformation("Orders is successfully returned");
-                return Ok(await _orderService.GetAll(userId));
+                var orders = await _orderService.GetAll(userId);
+                // foreach (var order in orders)
+                // {
+                //     order.Products = _context.ProductOrders.Where(obj => obj.OrderId == order.Id).
+                // }
+                var response = orders.Select(obj => new
+                {
+                    obj.Date,
+                    obj.TotalPrice,
+                    Products = _context.ProductOrders.Where(productOrder => productOrder.OrderId == obj.Id).Select(pO => new
+                    {
+                        Title = _context.Products.FirstOrDefault(prod => prod.Id == pO.ProductId).Title,
+                        pO.Amount
+                    })
+                });
+                return Ok(response);
             }
             catch (SecurityTokenValidationException e)
             {

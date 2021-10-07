@@ -11,11 +11,13 @@ namespace Services
     public class UserService: IUserService
     {
         private readonly UserManager<User> _userManager;
+        private readonly RoleManager<Role> _roleManager;
         private readonly IMapper _mapper;
 
-        public UserService(UserManager<User> userManager)
+        public UserService(UserManager<User> userManager,RoleManager<Role> roleManager)
         {
             _userManager = userManager;
+            _roleManager = roleManager;
         }
         
         public async Task<User> GetUserByEmail(string email)
@@ -34,19 +36,18 @@ namespace Services
 
         public async Task<User> Create(RegistrationDto registrationDto)
         {
-            var user = _mapper.Map<User>(registrationDto);
-            user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(registrationDto.Password);
-            // User user = new()
-            // {
-            //     Id = Guid.NewGuid(),
-            //     FirstName = registrationDto.FirstName,
-            //     LastName = registrationDto.LastName,
-            //     UserName = registrationDto.UserName,
-            //     Email = registrationDto.Email,
-            //     PasswordHash = BCrypt.Net.BCrypt.HashPassword(registrationDto.Password),
-            // }; 
-            await _userManager.CreateAsync(user);
+            await CheckRoles();
+            User user = new()
+            {
+                Id = Guid.NewGuid(),
+                Email = registrationDto.Email,
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword(registrationDto.Password),
+                UserName = registrationDto.Email
+            }; 
+            var newUser = await _userManager.CreateAsync(user);
+            Console.WriteLine(newUser);
             await _userManager.AddToRoleAsync(user, "User");
+            
             return user;
         }
 
@@ -69,6 +70,18 @@ namespace Services
         public async Task<IEnumerable<string>> GetUserRoles(User user)
         {
             return await _userManager.GetRolesAsync(user);
+        }
+
+        private async Task CheckRoles()
+        {
+            if (!await _roleManager.RoleExistsAsync("Admin"))
+            {
+                await _roleManager.CreateAsync(new Role { Description = "Admin", Name = "Admin" });
+            }
+            if (!await _roleManager.RoleExistsAsync("User"))
+            {
+                await _roleManager.CreateAsync(new Role { Description = "User", Name = "User" });
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211005175656_UpdateOrderEntity")]
+    [Migration("20211007125816_UpdateOrderEntity")]
     partial class UpdateOrderEntity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,8 +38,6 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
-
                     b.ToTable("Orders");
                 });
 
@@ -52,17 +50,20 @@ namespace Data.Migrations
                     b.Property<int>("Amount")
                         .HasColumnType("integer");
 
-                    b.Property<string>("Brand")
-                        .HasColumnType("text");
-
                     b.Property<string>("Color")
                         .HasColumnType("text");
+
+                    b.Property<double>("Diagonal")
+                        .HasColumnType("double precision");
 
                     b.Property<string>("Image")
                         .HasColumnType("text");
 
                     b.Property<int>("Memory")
                         .HasColumnType("integer");
+
+                    b.Property<double>("NewPrice")
+                        .HasColumnType("double precision");
 
                     b.Property<double>("Price")
                         .HasColumnType("double precision");
@@ -94,7 +95,7 @@ namespace Data.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("ProductOrder");
+                    b.ToTable("ProductOrders");
                 });
 
             modelBuilder.Entity("Entities.Role", b =>
@@ -148,12 +149,6 @@ namespace Data.Migrations
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("boolean");
-
-                    b.Property<string>("FirstName")
-                        .HasColumnType("text");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("text");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("boolean");
@@ -301,15 +296,6 @@ namespace Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("Entities.Order", b =>
-                {
-                    b.HasOne("Entities.User", null)
-                        .WithMany("Orders")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Entities.ProductOrder", b =>
                 {
                     b.HasOne("Entities.Order", null)
@@ -373,11 +359,6 @@ namespace Data.Migrations
             modelBuilder.Entity("Entities.Order", b =>
                 {
                     b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("Entities.User", b =>
-                {
-                    b.Navigation("Orders");
                 });
 #pragma warning restore 612, 618
         }

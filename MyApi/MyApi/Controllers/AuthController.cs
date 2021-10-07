@@ -44,8 +44,8 @@ namespace MyApi.Controllers
         [ProducesResponseType(401)]
         public async Task<ActionResult<AccessToken>> Login(LoginDto loginDto)
         {
-            if (!await _authService.ValidateUser(loginDto))
-                return Unauthorized("Password or email is invalid");
+            // if (!await _authService.ValidateUser(loginDto))
+            //     return Unauthorized("Password or email is invalid");
 
             _logger.LogInformation("Token is successfully created");
             return StatusCode(201, await _authService.Login(loginDto));
@@ -58,8 +58,6 @@ namespace MyApi.Controllers
         ///
         ///     POST /registration
         ///     {
-        ///         firstname: ‘John’,
-        ///         lastname: ‘Doe’,
         ///         email: ‘test@email.com’,
         ///         password: ‘12345’
         ///     }
