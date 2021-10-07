@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/Users/home/RiderProjects/my-api/MyApi/Entities/Entities.csproj": {}
+    "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj": {}
   },
   "projects": {
-    "/Users/home/RiderProjects/my-api/MyApi/Entities/Entities.csproj": {
+    "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/home/RiderProjects/my-api/MyApi/Entities/Entities.csproj",
+        "projectUniqueName": "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "/Users/home/RiderProjects/my-api/MyApi/Entities/Entities.csproj",
-        "packagesPath": "/Users/home/.nuget/packages/",
-        "outputPath": "/Users/home/RiderProjects/my-api/MyApi/Entities/obj/",
+        "projectPath": "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj",
+        "packagesPath": "/Users/pasha/.nuget/packages/",
+        "outputPath": "/Users/pasha/GitHub/my-api/MyApi/Entities/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/home/.nuget/NuGet/NuGet.Config"
+          "/Users/pasha/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -62,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
         }
       }
     }

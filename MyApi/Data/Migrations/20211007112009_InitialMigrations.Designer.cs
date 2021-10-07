@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210929103637_Initial")]
-    partial class Initial
+    [Migration("20211007112009_InitialMigrations")]
+    partial class InitialMigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,24 +27,16 @@ namespace Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("AddressId")
-                        .HasColumnType("uuid");
-
-                    b.Property<int>("Amount")
-                        .HasColumnType("integer");
-
                     b.Property<DateTime>("Date")
                         .HasColumnType("timestamp without time zone");
 
-                    b.Property<Guid?>("ProductId")
-                        .HasColumnType("uuid");
+                    b.Property<double>("TotalPrice")
+                        .HasColumnType("double precision");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
 
                     b.HasIndex("UserId");
 
@@ -63,8 +55,17 @@ namespace Data.Migrations
                     b.Property<string>("Color")
                         .HasColumnType("text");
 
+                    b.Property<double>("Diagonal")
+                        .HasColumnType("double precision");
+
                     b.Property<string>("Image")
                         .HasColumnType("text");
+
+                    b.Property<int>("Memory")
+                        .HasColumnType("integer");
+
+                    b.Property<double>("NewPrice")
+                        .HasColumnType("double precision");
 
                     b.Property<double>("Price")
                         .HasColumnType("double precision");
@@ -75,6 +76,28 @@ namespace Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("Entities.ProductOrder", b =>
+                {
+                    b.Property<Guid>("ProductOrderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("ProductOrderId");
+
+                    b.HasIndex("OrderId");
+
+                    b.ToTable("ProductOrder");
                 });
 
             modelBuilder.Entity("Entities.Role", b =>
@@ -128,12 +151,6 @@ namespace Data.Migrations
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("boolean");
-
-                    b.Property<string>("FirstName")
-                        .HasColumnType("text");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("text");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("boolean");
@@ -283,19 +300,20 @@ namespace Data.Migrations
 
             modelBuilder.Entity("Entities.Order", b =>
                 {
-                    b.HasOne("Entities.Product", "Product")
-                        .WithMany("Orders")
-                        .HasForeignKey("ProductId");
-
-                    b.HasOne("Entities.User", "User")
+                    b.HasOne("Entities.User", null)
                         .WithMany("Orders")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
 
-                    b.Navigation("Product");
-
-                    b.Navigation("User");
+            modelBuilder.Entity("Entities.ProductOrder", b =>
+                {
+                    b.HasOne("Entities.Order", null)
+                        .WithMany("Products")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -349,9 +367,9 @@ namespace Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Entities.Product", b =>
+            modelBuilder.Entity("Entities.Order", b =>
                 {
-                    b.Navigation("Orders");
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("Entities.User", b =>

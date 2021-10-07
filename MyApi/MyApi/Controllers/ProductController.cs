@@ -10,7 +10,7 @@ using Services;
 
 namespace MyApi.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Produces("application/json")]
     [ApiController]
     [Route("api/v1/product")]
@@ -140,7 +140,7 @@ namespace MyApi.Controllers
         
         [AllowAnonymous]
         [HttpGet("diagonals")]
-        public async Task<ActionResult<ProductResponseDto>> GetDiagonals()
+        public async Task<ActionResult<IEnumerable<double>>> GetDiagonals()
         {
             var product = await _service.GetDiagonals();
             return Ok(product);
@@ -148,7 +148,7 @@ namespace MyApi.Controllers
         
         [AllowAnonymous]
         [HttpGet("colors")]
-        public async Task<ActionResult<ProductResponseDto>> GetColors()
+        public async Task<ActionResult<IEnumerable<string>>> GetColors()
         {
             var product = await _service.GetColors();
             return Ok(product);
@@ -156,7 +156,7 @@ namespace MyApi.Controllers
         
         [AllowAnonymous]
         [HttpGet("memories")]
-        public async Task<ActionResult<ProductResponseDto>> GetMemories()
+        public async Task<ActionResult<IEnumerable<int>>> GetMemories()
         {
             var product = await _service.GetMemories();
             return Ok(product);
