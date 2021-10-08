@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -55,6 +56,35 @@ namespace Data
         public async Task<IEnumerable<int>> GetMemories()
         {
             return await _context.Products.Select(obj => obj.Memory).Distinct().ToListAsync();
+        }
+        
+        public async Task Discount(QueryMetaDto queryMetaDto, double discount)
+        {
+            var disc = (100 - discount) / 100;
+
+            var sql = $"UPDATE \"Products\" " +
+                      $"SET \"NewPrice\" = ROUND(\"NewPrice\" * {disc})" +
+                      $"WHERE \"Title\" LIKE '%{queryMetaDto.Search}%' ";
+            
+            if (queryMetaDto.Diagonals != "") sql += $" and \"Diagonal\" IN ({queryMetaDto.Diagonals}) ";
+            if (queryMetaDto.Memories != "") sql += $" and \"Memory\" IN ({queryMetaDto.Memories}) ";
+            if (queryMetaDto.Colors != "") sql += $" and \"Color\" IN ({queryMetaDto.Colors}) ";
+
+            //await _context.Products.FromSqlRaw(sql)
+            await _context.Database.ExecuteSqlRawAsync(sql);
+        }
+        
+        public async Task NewPrice(QueryMetaDto queryMetaDto)
+        {
+            var sql = $"UPDATE \"Products\" " +
+                      $"SET \"NewPrice\" = \"Price\"" +
+                      $"WHERE \"Title\" LIKE '%{queryMetaDto.Search}%' ";
+            
+            if (queryMetaDto.Diagonals != "") sql += $" and \"Diagonal\" IN ({queryMetaDto.Diagonals}) ";
+            if (queryMetaDto.Memories != "") sql += $" and \"Memory\" IN ({queryMetaDto.Memories}) ";
+            if (queryMetaDto.Colors != "") sql += $" and \"Color\" IN ({queryMetaDto.Colors}) ";
+            
+            await _context.Database.ExecuteSqlRawAsync(sql);
         }
     }
 }

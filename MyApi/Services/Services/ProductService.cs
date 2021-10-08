@@ -81,5 +81,15 @@ namespace Services
         {
             return await _repository.GetMemories();
         }
+        
+        public async Task Discount(QueryMetaDto queryMetaDto, double discount)
+        {
+            await _repository.Discount(queryMetaDto, discount);
+        }
+        
+        public async Task NewPrice(QueryMetaDto queryMetaDto)
+        {
+            await _repository.NewPrice(queryMetaDto);
+        }
     }
 }

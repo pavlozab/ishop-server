@@ -12,6 +12,8 @@ namespace Data
         Task<long> Count();
         Task<IEnumerable<double>> GetDiagonals(); 
         Task<IEnumerable<string>> GetColors(); 
-        Task<IEnumerable<int>> GetMemories(); 
+        Task<IEnumerable<int>> GetMemories();
+        Task Discount(QueryMetaDto queryMetaDto, double discount);
+        Task NewPrice(QueryMetaDto queryMetaDto);
     }
 }
