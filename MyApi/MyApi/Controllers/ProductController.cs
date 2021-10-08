@@ -180,24 +180,5 @@ namespace MyApi.Controllers
                 }
             });
         }
-        
-        [HttpGet("restore")]
-        public async Task<ActionResult<PaginatedResponseDto<ProductResponseDto>>> RestorePrice([FromQuery]QueryMetaDto queryMetaDto)
-        {
-            var count = await _service.Count();
-            queryMetaDto.Validate();
-            await _service.NewPrice(queryMetaDto);
-            var addresses = await _service.GetAll(queryMetaDto);
-
-            return Ok(new PaginatedResponseDto<ProductResponseDto>
-            {
-                Items = addresses,
-                Meta = new MetaDto
-                {
-                    QueryMetaDto = queryMetaDto,
-                    Count = count
-                }
-            });
-        }
     }
 }

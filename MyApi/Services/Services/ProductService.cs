@@ -87,9 +87,5 @@ namespace Services
             await _repository.Discount(queryMetaDto, discount);
         }
         
-        public async Task NewPrice(QueryMetaDto queryMetaDto)
-        {
-            await _repository.NewPrice(queryMetaDto);
-        }
     }
 }
