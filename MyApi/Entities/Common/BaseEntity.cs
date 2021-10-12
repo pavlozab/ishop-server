@@ -2,11 +2,7 @@ using System;
 
 namespace Entities
 {
-    public interface IEntity
-    {
-    }
-
-    public abstract class BaseEntity<TKey> : IEntity
+    public abstract class BaseEntity<TKey> 
     {
         public TKey Id { get; set; }
     }

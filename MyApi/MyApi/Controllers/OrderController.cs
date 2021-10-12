@@ -48,10 +48,6 @@ namespace MyApi.Controllers
 
                 _logger.LogInformation("Orders is successfully returned");
                 var orders = await _orderService.GetAll(userId);
-                // foreach (var order in orders)
-                // {
-                //     order.Products = _context.ProductOrders.Where(obj => obj.OrderId == order.Id).
-                // }
                 var response = orders.Select(obj => new
                 {
                     obj.Date,

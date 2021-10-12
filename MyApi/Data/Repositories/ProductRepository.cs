@@ -17,9 +17,9 @@ namespace Data
 
         public async Task<IEnumerable<Product>> GetAll(QueryMetaDto queryMetaDto)
         {
-            var sql = $"SELECT * FROM \"Products\" " +
-                           $"WHERE \"Title\" LIKE '%{queryMetaDto.Search}%' ";
-            
+            var sql = $"SELECT * FROM lower(\"Products\") " +
+                           $"WHERE \"Title\" LIKE '%{queryMetaDto.Search.ToLower()}%' ";
+
             if (queryMetaDto.Diagonals != "") sql += $" and \"Diagonal\" IN ({queryMetaDto.Diagonals}) ";
             if (queryMetaDto.Memories != "") sql += $" and \"Memory\" IN ({queryMetaDto.Memories}) ";
             if (queryMetaDto.Colors != "") sql += $" and \"Color\" IN ({queryMetaDto.Colors}) ";
