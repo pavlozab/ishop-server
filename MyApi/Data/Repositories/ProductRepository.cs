@@ -17,19 +17,18 @@ namespace Data
 
         public async Task<IEnumerable<Product>> GetAll(QueryMetaDto queryMetaDto)
         {
-            var sql = $"SELECT * FROM lower(\"Products\") " +
-                           $"WHERE \"Title\" LIKE '%{queryMetaDto.Search.ToLower()}%' ";
+            var sql = $"SELECT * FROM \"Products\" " +
+                           $"WHERE lower(\"Title\") LIKE '%{queryMetaDto.Search.ToLower()}%' ";
 
             if (queryMetaDto.Diagonals != "") sql += $" and \"Diagonal\" IN ({queryMetaDto.Diagonals}) ";
             if (queryMetaDto.Memories != "") sql += $" and \"Memory\" IN ({queryMetaDto.Memories}) ";
             if (queryMetaDto.Colors != "") sql += $" and \"Color\" IN ({queryMetaDto.Colors}) ";
 
-            sql += $"ORDER BY \"{queryMetaDto.SortBy}\" {queryMetaDto.SortType} " + 
-                   $"LIMIT {queryMetaDto.Limit} OFFSET {queryMetaDto.Offset};";
-            
+            sql += $"ORDER BY \"{queryMetaDto.SortBy}\" {queryMetaDto.SortType} ;";
+
             IEnumerable<Product> addresses = await _context.Products.FromSqlRaw(sql).ToListAsync();
             
-            return addresses;
+            return addresses.Skip(queryMetaDto.Offset * queryMetaDto.Limit).Take(queryMetaDto.Limit);
         }
         
         public async Task Update(Product obj)
@@ -61,9 +60,10 @@ namespace Data
         public async Task Discount(QueryMetaDto queryMetaDto, double discount)
         {
             var disc = (100 - discount) / 100;
-            
+            var newPrice = disc == 100 ? "0" : $"ROUND(\"Price\" * {disc})";
+
             var sql = $"UPDATE \"Products\" "  +
-                      $"SET \"NewPrice\" = ROUND(\"Price\" * {disc}) " +
+                      $"SET \"NewPrice\" = {newPrice} " +
                       $"WHERE \"Title\" LIKE '%{queryMetaDto.Search}%' ";
             
             if (queryMetaDto.Diagonals != "") sql += $" and \"Diagonal\" IN ({queryMetaDto.Diagonals}) ";
