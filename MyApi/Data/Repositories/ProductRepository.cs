@@ -60,7 +60,7 @@ namespace Data
         public async Task Discount(QueryMetaDto queryMetaDto, double discount)
         {
             var disc = (100 - discount) / 100;
-            var newPrice = disc == 100 ? "0" : $"ROUND(\"Price\" * {disc})";
+            var newPrice = discount == 0 ? "0" : $"ROUND(\"Price\" * {disc})";
 
             var sql = $"UPDATE \"Products\" "  +
                       $"SET \"NewPrice\" = {newPrice} " +

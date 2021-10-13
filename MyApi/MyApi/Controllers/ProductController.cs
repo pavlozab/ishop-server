@@ -163,6 +163,7 @@ namespace MyApi.Controllers
         }
         
         [HttpGet("discount")]
+        //[Authorize(Roles = "Admin")]
         public async Task<ActionResult<PaginatedResponseDto<ProductResponseDto>>> UpdatePrice([FromQuery]QueryMetaDto queryMetaDto, [FromQuery]double discount)
         {
             var count = await _service.Count();
