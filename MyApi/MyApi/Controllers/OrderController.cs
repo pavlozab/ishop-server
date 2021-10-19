@@ -40,20 +40,27 @@ namespace MyApi.Controllers
         [HttpGet]
         [ProducesResponseType(200)]
         [ProducesResponseType(401)]
-        public async Task<ActionResult> GetAllOrders()
+        public ActionResult GetAllOrders()
         {
             try
             {
                 var userId = GetCurrentUserId();
 
                 _logger.LogInformation("Orders is successfully returned");
-                var orders = await _orderService.GetAll(userId);
-                
-                var response = orders.Select(obj => new
-                {
-                    obj.Date,
-                    obj.TotalPrice
-                });
+
+                var response = _context.Orders.Where(obj => obj.UserId == userId)
+                    .Select(order => new
+                    {
+                        order.Date,
+                        Products = order.Products.Select(ob => new
+                        {
+                            Title = _context.Products.FirstOrDefault(prod => prod.Id == ob.ProductId).Title,
+                            ob.Amount,
+                            _context.Products.FirstOrDefault(prod => prod.Id == ob.ProductId).NewPrice,
+                            _context.Products.FirstOrDefault(prod => prod.Id == ob.ProductId).Price
+                        }),
+                        order.TotalPrice
+                    });
                 return Ok(response);
             }
             catch (SecurityTokenValidationException e)
