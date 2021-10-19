@@ -32,7 +32,9 @@ namespace Services
             
             claims.AddRange(userRoles.Select(role => new Claim(ClaimTypes.Role, role)));
 
-            return await _jwtAuthManager.GenerateTokens(claims);
+            var token = await _jwtAuthManager.GenerateTokens(claims);
+            token.user_role = userRoles.FirstOrDefault();
+            return token;
         }
         
         public async Task<bool> ValidateUser(LoginDto loginDto)
@@ -47,7 +49,6 @@ namespace Services
 
         public async Task<AccessToken> Login(LoginDto loginDto)
         {
-            Console.WriteLine("1");
             var user = await _userService.GetUserByEmail(loginDto.Email);
             return await GetAccessToken(user);
         }

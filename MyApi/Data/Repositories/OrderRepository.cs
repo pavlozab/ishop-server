@@ -14,6 +14,7 @@ namespace Data
 
         public async Task<IEnumerable<Order>> GetAll(Guid userId)
         {
+            
             return await _context.Orders.Where(obj => obj.UserId == userId).ToListAsync();
         }
     }

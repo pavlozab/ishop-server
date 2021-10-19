@@ -39,7 +39,7 @@ namespace JwtAuth
             var accessToken = new JwtSecurityTokenHandler().WriteToken(jwtToken);
             return new AccessToken
             {
-                access_token = accessToken
+                access_token = accessToken,
             };
         }
     }
@@ -47,5 +47,6 @@ namespace JwtAuth
     public class AccessToken
     {
         public string access_token { get; set; }
+        public string user_role { get; set; }
     }
 }

@@ -48,15 +48,11 @@ namespace MyApi.Controllers
 
                 _logger.LogInformation("Orders is successfully returned");
                 var orders = await _orderService.GetAll(userId);
+                
                 var response = orders.Select(obj => new
                 {
                     obj.Date,
-                    obj.TotalPrice,
-                    Products = _context.ProductOrders.Where(productOrder => productOrder.OrderId == obj.Id).Select(pO => new
-                    {
-                        Title = _context.Products.FirstOrDefault(prod => prod.Id == pO.ProductId).Title,
-                        pO.Amount
-                    })
+                    obj.TotalPrice
                 });
                 return Ok(response);
             }

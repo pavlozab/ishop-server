@@ -144,7 +144,7 @@ namespace MyApi
                 UseApiProblemDetailsException = true 
             });
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
             
             app.UseRouting();
             app.UseCors(builder => builder.WithOrigins("http://localhost:3001", "http://localhost:3000")
