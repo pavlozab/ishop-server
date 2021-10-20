@@ -62,8 +62,8 @@ namespace Services
                 await _productsRepository.Update(currentProduct);
 
                 newOrder.TotalPrice += currentProduct.NewPrice > 0
-                    ? product.Amount * currentProduct.Price
-                    : product.Amount * currentProduct.NewPrice;;
+                    ? product.Amount * currentProduct.NewPrice
+                    : product.Amount * currentProduct.Price;
             }
             
             newOrder.UserId = userId;
