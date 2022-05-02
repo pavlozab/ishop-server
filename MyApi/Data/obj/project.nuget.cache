@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1Z7Kq8tXTf2WFjTY3zz54MXJcfBSzjH3a+BOE6husND9/iaAOsjtZNb/hMOnKwwvWuGYIwq1jSbyaxuN9PmhRw==",
+  "dgSpecHash": "eDn1VZmkjfk54yN+vODM3MJb8VpFphNdo/aCPzNNRMubpea9SBZg4EdtwcHuYEe7P+fgK1C2JqT7xpv3PewpTw==",
   "success": true,
-  "projectFilePath": "/Users/pasha/GitHub/my-api/MyApi/Data/Data.csproj",
+  "projectFilePath": "/Users/pasha/RiderProjects/my-api/MyApi/Data/Data.csproj",
   "expectedPackageFiles": [
     "/Users/pasha/.nuget/packages/microsoft.aspnetcore.cryptography.internal/6.0.0-preview.3.21201.13/microsoft.aspnetcore.cryptography.internal.6.0.0-preview.3.21201.13.nupkg.sha512",
     "/Users/pasha/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/6.0.0-preview.3.21201.13/microsoft.aspnetcore.cryptography.keyderivation.6.0.0-preview.3.21201.13.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rvVOwBDtV+Kbr6s3taMGSsYi4XTxDGCieSx3YVNa0awZGXMMFwNBcg6md1alB2ksZnUhn0VAsg0EHijDMjS3Ag==",
+  "dgSpecHash": "bI9k6Va6z5+04HQSRyNYImdkeyDsOGYbpZ2eQpu07R+7KF4l98g1TsF8OHGb5dh4dn7a9X9FbbAy4qDsrK5TDg==",
   "success": true,
-  "projectFilePath": "/Users/pasha/GitHub/my-api/MyApi/MyApi/MyApi.csproj",
+  "projectFilePath": "/Users/pasha/RiderProjects/my-api/MyApi/MyApi/MyApi.csproj",
   "expectedPackageFiles": [
     "/Users/pasha/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
     "/Users/pasha/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
@@ -64,7 +64,8 @@
     "/Users/pasha/.nuget/packages/system.security.cryptography.protecteddata/5.0.0/system.security.cryptography.protecteddata.5.0.0.nupkg.sha512",
     "/Users/pasha/.nuget/packages/system.security.permissions/5.0.0/system.security.permissions.5.0.0.nupkg.sha512",
     "/Users/pasha/.nuget/packages/system.security.principal.windows/5.0.0/system.security.principal.windows.5.0.0.nupkg.sha512",
-    "/Users/pasha/.nuget/packages/system.windows.extensions/5.0.0/system.windows.extensions.5.0.0.nupkg.sha512"
+    "/Users/pasha/.nuget/packages/system.windows.extensions/5.0.0/system.windows.extensions.5.0.0.nupkg.sha512",
+    "/Users/pasha/.nuget/packages/microsoft.netcore.app.host.osx-x64/5.0.16/microsoft.netcore.app.host.osx-x64.5.0.16.nupkg.sha512"
   ],
   "logs": [
     {

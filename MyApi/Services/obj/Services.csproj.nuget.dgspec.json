@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/pasha/GitHub/my-api/MyApi/Services/Services.csproj": {}
+    "/Users/pasha/RiderProjects/my-api/MyApi/Services/Services.csproj": {}
   },
   "projects": {
-    "/Users/pasha/GitHub/my-api/MyApi/Data/Data.csproj": {
+    "/Users/pasha/RiderProjects/my-api/MyApi/Data/Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/pasha/GitHub/my-api/MyApi/Data/Data.csproj",
+        "projectUniqueName": "/Users/pasha/RiderProjects/my-api/MyApi/Data/Data.csproj",
         "projectName": "Data",
-        "projectPath": "/Users/pasha/GitHub/my-api/MyApi/Data/Data.csproj",
+        "projectPath": "/Users/pasha/RiderProjects/my-api/MyApi/Data/Data.csproj",
         "packagesPath": "/Users/pasha/.nuget/packages/",
-        "outputPath": "/Users/pasha/GitHub/my-api/MyApi/Data/obj/",
+        "outputPath": "/Users/pasha/RiderProjects/my-api/MyApi/Data/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -29,8 +29,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj": {
-                "projectPath": "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj"
+              "/Users/pasha/RiderProjects/my-api/MyApi/Entities/Entities.csproj": {
+                "projectPath": "/Users/pasha/RiderProjects/my-api/MyApi/Entities/Entities.csproj"
               }
             }
           }
@@ -73,18 +73,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj": {
+    "/Users/pasha/RiderProjects/my-api/MyApi/Entities/Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj",
+        "projectUniqueName": "/Users/pasha/RiderProjects/my-api/MyApi/Entities/Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj",
+        "projectPath": "/Users/pasha/RiderProjects/my-api/MyApi/Entities/Entities.csproj",
         "packagesPath": "/Users/pasha/.nuget/packages/",
-        "outputPath": "/Users/pasha/GitHub/my-api/MyApi/Entities/obj/",
+        "outputPath": "/Users/pasha/RiderProjects/my-api/MyApi/Entities/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -138,18 +138,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/pasha/GitHub/my-api/MyApi/Services/Services.csproj": {
+    "/Users/pasha/RiderProjects/my-api/MyApi/Services/Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/pasha/GitHub/my-api/MyApi/Services/Services.csproj",
+        "projectUniqueName": "/Users/pasha/RiderProjects/my-api/MyApi/Services/Services.csproj",
         "projectName": "Services",
-        "projectPath": "/Users/pasha/GitHub/my-api/MyApi/Services/Services.csproj",
+        "projectPath": "/Users/pasha/RiderProjects/my-api/MyApi/Services/Services.csproj",
         "packagesPath": "/Users/pasha/.nuget/packages/",
-        "outputPath": "/Users/pasha/GitHub/my-api/MyApi/Services/obj/",
+        "outputPath": "/Users/pasha/RiderProjects/my-api/MyApi/Services/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -167,14 +167,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/pasha/GitHub/my-api/MyApi/Data/Data.csproj": {
-                "projectPath": "/Users/pasha/GitHub/my-api/MyApi/Data/Data.csproj"
+              "/Users/pasha/RiderProjects/my-api/MyApi/Data/Data.csproj": {
+                "projectPath": "/Users/pasha/RiderProjects/my-api/MyApi/Data/Data.csproj"
               },
-              "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj": {
-                "projectPath": "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj"
+              "/Users/pasha/RiderProjects/my-api/MyApi/Entities/Entities.csproj": {
+                "projectPath": "/Users/pasha/RiderProjects/my-api/MyApi/Entities/Entities.csproj"
               },
-              "/Users/pasha/GitHub/my-api/MyApi/WebFramework/WebFramework.csproj": {
-                "projectPath": "/Users/pasha/GitHub/my-api/MyApi/WebFramework/WebFramework.csproj"
+              "/Users/pasha/RiderProjects/my-api/MyApi/WebFramework/WebFramework.csproj": {
+                "projectPath": "/Users/pasha/RiderProjects/my-api/MyApi/WebFramework/WebFramework.csproj"
               }
             }
           }
@@ -221,25 +221,22 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/pasha/GitHub/my-api/MyApi/WebFramework/WebFramework.csproj": {
+    "/Users/pasha/RiderProjects/my-api/MyApi/WebFramework/WebFramework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/pasha/GitHub/my-api/MyApi/WebFramework/WebFramework.csproj",
+        "projectUniqueName": "/Users/pasha/RiderProjects/my-api/MyApi/WebFramework/WebFramework.csproj",
         "projectName": "WebFramework",
-        "projectPath": "/Users/pasha/GitHub/my-api/MyApi/WebFramework/WebFramework.csproj",
+        "projectPath": "/Users/pasha/RiderProjects/my-api/MyApi/WebFramework/WebFramework.csproj",
         "packagesPath": "/Users/pasha/.nuget/packages/",
-        "outputPath": "/Users/pasha/GitHub/my-api/MyApi/WebFramework/obj/",
+        "outputPath": "/Users/pasha/RiderProjects/my-api/MyApi/WebFramework/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -257,8 +254,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj": {
-                "projectPath": "/Users/pasha/GitHub/my-api/MyApi/Entities/Entities.csproj"
+              "/Users/pasha/RiderProjects/my-api/MyApi/Entities/Entities.csproj": {
+                "projectPath": "/Users/pasha/RiderProjects/my-api/MyApi/Entities/Entities.csproj"
               }
             }
           }
@@ -293,7 +290,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }
