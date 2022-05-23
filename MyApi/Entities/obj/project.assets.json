@@ -772,11 +772,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/pasha/RiderProjects/my-api/MyApi/Entities/Entities.csproj",
+      "projectUniqueName": "/Users/pasha/ishop/ishop-server/MyApi/Entities/Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "/Users/pasha/RiderProjects/my-api/MyApi/Entities/Entities.csproj",
+      "projectPath": "/Users/pasha/ishop/ishop-server/MyApi/Entities/Entities.csproj",
       "packagesPath": "/Users/pasha/.nuget/packages/",
-      "outputPath": "/Users/pasha/RiderProjects/my-api/MyApi/Entities/obj/",
+      "outputPath": "/Users/pasha/ishop/ishop-server/MyApi/Entities/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

@@ -41,7 +41,7 @@ namespace Data.Dto
             
             SortType = SortType == "DESC" ? "DESC" : "ASC";
             Offset = Offset < 0 ? 0 : Offset;
-            Limit = Limit > 10 ? 10 : Limit;
+            // Limit = Limit > 10 ? 10 : Limit;
         }
     }
 }

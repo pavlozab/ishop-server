@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bI9k6Va6z5+04HQSRyNYImdkeyDsOGYbpZ2eQpu07R+7KF4l98g1TsF8OHGb5dh4dn7a9X9FbbAy4qDsrK5TDg==",
+  "dgSpecHash": "PJbohNegFRSiVTTkjjKOx9OBKvmQtqCcGnCsFuibA/TG4M7yJJ5nw63rt1c2+fEV2hI/y3VKxtC6c2lZ8yVhyg==",
   "success": true,
-  "projectFilePath": "/Users/pasha/RiderProjects/my-api/MyApi/MyApi/MyApi.csproj",
+  "projectFilePath": "/Users/pasha/ishop/ishop-server/MyApi/MyApi/MyApi.csproj",
   "expectedPackageFiles": [
     "/Users/pasha/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
     "/Users/pasha/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

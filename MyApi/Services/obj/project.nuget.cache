@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0HNzb5FtQyAgEgxv7K10K+J22r3fo2UT3xRSodFz4BeHYKKTSzw3htQUXBJH0ejf0IBikYS9cfUJrSS1xc43mw==",
+  "dgSpecHash": "amApeEBYNdbPRXnUfYdIt23nlM3pXmmf/AECGYAB3iXnzCV5PrlkeW16Wylk33HTOC7/PcfzQBXcmhr4P/rubQ==",
   "success": true,
-  "projectFilePath": "/Users/pasha/RiderProjects/my-api/MyApi/Services/Services.csproj",
+  "projectFilePath": "/Users/pasha/ishop/ishop-server/MyApi/Services/Services.csproj",
   "expectedPackageFiles": [
     "/Users/pasha/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
     "/Users/pasha/.nuget/packages/bcrypt.net/0.1.0/bcrypt.net.0.1.0.nupkg.sha512",

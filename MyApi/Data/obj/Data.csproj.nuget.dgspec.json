@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/pasha/RiderProjects/my-api/MyApi/Data/Data.csproj": {}
+    "/Users/pasha/ishop/ishop-server/MyApi/Data/Data.csproj": {}
   },
   "projects": {
-    "/Users/pasha/RiderProjects/my-api/MyApi/Data/Data.csproj": {
+    "/Users/pasha/ishop/ishop-server/MyApi/Data/Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/pasha/RiderProjects/my-api/MyApi/Data/Data.csproj",
+        "projectUniqueName": "/Users/pasha/ishop/ishop-server/MyApi/Data/Data.csproj",
         "projectName": "Data",
-        "projectPath": "/Users/pasha/RiderProjects/my-api/MyApi/Data/Data.csproj",
+        "projectPath": "/Users/pasha/ishop/ishop-server/MyApi/Data/Data.csproj",
         "packagesPath": "/Users/pasha/.nuget/packages/",
-        "outputPath": "/Users/pasha/RiderProjects/my-api/MyApi/Data/obj/",
+        "outputPath": "/Users/pasha/ishop/ishop-server/MyApi/Data/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -29,8 +29,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/pasha/RiderProjects/my-api/MyApi/Entities/Entities.csproj": {
-                "projectPath": "/Users/pasha/RiderProjects/my-api/MyApi/Entities/Entities.csproj"
+              "/Users/pasha/ishop/ishop-server/MyApi/Entities/Entities.csproj": {
+                "projectPath": "/Users/pasha/ishop/ishop-server/MyApi/Entities/Entities.csproj"
               }
             }
           }
@@ -77,14 +77,14 @@
         }
       }
     },
-    "/Users/pasha/RiderProjects/my-api/MyApi/Entities/Entities.csproj": {
+    "/Users/pasha/ishop/ishop-server/MyApi/Entities/Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/pasha/RiderProjects/my-api/MyApi/Entities/Entities.csproj",
+        "projectUniqueName": "/Users/pasha/ishop/ishop-server/MyApi/Entities/Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "/Users/pasha/RiderProjects/my-api/MyApi/Entities/Entities.csproj",
+        "projectPath": "/Users/pasha/ishop/ishop-server/MyApi/Entities/Entities.csproj",
         "packagesPath": "/Users/pasha/.nuget/packages/",
-        "outputPath": "/Users/pasha/RiderProjects/my-api/MyApi/Entities/obj/",
+        "outputPath": "/Users/pasha/ishop/ishop-server/MyApi/Entities/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VlErqrko59WJAyNuct9QtufyKajJ+4+AtEGftlMrO9O8wQaWROhGHaWal5bRBVSBBRgvKKIe6cqNhy2eGdrXuA==",
+  "dgSpecHash": "5dXkmUybwZRlGswnsc6p1VHnLrnconzfS0o/fGjHbxFSFOmUiIBEQQYAMk1TbIN0nATLfnIqpVfSEveakEQWQw==",
   "success": true,
-  "projectFilePath": "/Users/pasha/RiderProjects/my-api/MyApi/WebFramework/WebFramework.csproj",
+  "projectFilePath": "/Users/pasha/ishop/ishop-server/MyApi/WebFramework/WebFramework.csproj",
   "expectedPackageFiles": [
     "/Users/pasha/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
     "/Users/pasha/.nuget/packages/microsoft.aspnetcore.cryptography.internal/6.0.0-preview.3.21201.13/microsoft.aspnetcore.cryptography.internal.6.0.0-preview.3.21201.13.nupkg.sha512",

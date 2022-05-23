@@ -8,6 +8,6 @@ namespace Config
         public string Username { get; set; }
         public string Password { get; set; }
         public string ConnectionString => $"Server={Server};Port={Port};Database={Database};" +
-                                          $"Username={Username};Password={Password}";
+                                          $"Username={Username};Password={Password};SSL Mode=Require;Trust Server Certificate=true";
     }
 }
